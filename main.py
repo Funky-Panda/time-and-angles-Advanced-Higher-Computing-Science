@@ -1,20 +1,19 @@
-# 1min = 6° , 1hr = 30°
 import datetime
 
 time = (datetime.datetime.now() + datetime.timedelta(hours=1)).time()
 hour = time.strftime("%I")
 minute = time.strftime("%M")
-print("Current Time: "+ str(time)[:5])
+print("Current Time: " + str(time)[:5])
 
-minuteDegress = int(minute) * 6
-hourDegress = int(hour) * 30
+minute_degrees = int(minute) * 6
+hour_degrees = int(hour)* 30 + (int(minute) / 60) * 30
 
-if hourDegress == 360:
-    print(f"Hour: 0/{hourDegress}°")
+if hour_degrees == 360:
+    print(f"Hour: 0/{hour_degrees}°")
 else:
-    print(f"Hour: {hourDegress}°")
+    print(f"Hour: {hour_degrees}°")
 
-if minuteDegress == 0:
+if minute_degrees == 0:
     print(f"Minute: 0/360°")
 else:
-    print(f"Minute: {minuteDegress}°")
+    print(f"Minute: {minute_degrees}°")
