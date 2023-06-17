@@ -9,6 +9,10 @@ minute = time.strftime("%M")
 minute_degrees = int(minute) * 6
 hour_degrees = int(hour)* 30 + (int(minute) / 60) * 30
 
+#Checks to see if the angle is greater than 360 if it is then it will get the actuall angle 
+if hour_degrees >= 360:
+    hour_degrees -= 360
+
 # Displays the current time to the user along with the degrees of both the hour and minutes
 
 print("Current Time: " + str(time)[:5]) 
