@@ -26,3 +26,8 @@ if minute_degrees == 0:
     print("Minute: 0/360°")
 else:
     print(f"Minute: {minute_degrees}°")
+
+
+
+angleBetween = abs(minute_degrees-hour_degrees)
+print(f"Angle Between {angleBetween}°")
